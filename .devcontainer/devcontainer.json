@@ -19,7 +19,12 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "bash /workspaces/screenpipe/.devcontainer/scripts/postCreateCommand.sh",
 
-	"onCreateCommand": "sudo cp .devcontainer/scripts/welcome-message.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt"
+    "onCreateCommand": "sudo cp .devcontainer/scripts/welcome-message.txt /usr/local/etc/vscode-dev-containers/first-run-notice.txt",
+    "features": {
+        "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {
+            "shallowClone": true
+        }
+    }
 
 	// Configure tool-specific properties.
 	// "customizations": {},
